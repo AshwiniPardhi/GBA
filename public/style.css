@@ -1,0 +1,218 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif; /* Standard sans-serif font */
+    margin: 0; /* Remove default browser margin */
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally for flexbox */
+}
+
+/* Main container for the application content */
+.container {
+    width: 100%;
+    max-width: 800px; /* Constrain width for larger screens, allowing responsiveness */
+    background-color: #fff; /* White background for the content area */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Main page title */
+h1 {
+    color: #2c3e50; /* Dark blue-gray */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Sub-headings (e.g., "Results") */
+h2 {
+    color: #34495e; /* Slightly lighter blue-gray */
+    border-bottom: 2px solid #ecf0f1; /* Light separator line */
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+/* Fieldset for grouping form controls */
+fieldset {
+    border: 1px solid #bdc3c7; /* Light gray border */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fdfefe; /* Very light background for fieldsets */
+}
+
+/* Legend for fieldsets */
+legend {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #2980b9; /* Blue color for legends */
+    padding: 0 10px; /* Padding around legend text */
+}
+
+/* Labels for form inputs */
+label {
+    display: block; /* Ensure labels take full width for stacking */
+    margin-bottom: 5px;
+    color: #555; /* Dark gray for label text */
+    font-weight: normal;
+}
+
+/* Styling for number, text, and select inputs */
+input[type="number"],
+input[type="text"],
+select { /* Added select styling for consistency */
+    width: calc(100% - 22px); /* Adjust width to account for padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #fff; /* Ensure select has white background */
+}
+
+/* Cloud provider selector radio buttons styling */
+fieldset div input[name="cloud_provider_selector"] + label {
+    display: inline-block; /* Keep radio and label on same line */
+    margin-right: 15px; /* Space between radio options */
+    margin-left: 3px;
+    margin-bottom: 10px; /* Space below the radio group */
+}
+
+/* Styling for individual provider input sections */
+.provider_inputs {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px dashed #ddd; /* Light dashed border to distinguish */
+    border-radius: 4px;
+    background-color: #fcfcfc; /* Slightly different background */
+}
+
+.provider_inputs h2 {
+    font-size: 1.1em;
+    color: #3498db; /* Specific color for these sub-headings */
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-bottom: none; /* Remove main H2 border style */
+}
+
+/* Estimated Cloud Cost Display */
+#estimated_cloud_cost_display_container {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e9f7ef; /* Light green background */
+    border-radius: 4px;
+    text-align: center;
+}
+
+#estimated_cloud_cost_display {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #229954; /* Darker green text */
+}
+
+
+/* Calculate button styling */
+button#calculate_button {
+    background-color: #27ae60; /* Green background */
+    color: white; /* White text */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-top: 10px;
+}
+
+button#calculate_button:hover {
+    background-color: #229954; /* Darker green on hover */
+}
+
+/* Container for displaying results */
+#results_container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background for results area */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Styling for individual result lines */
+#results_container div {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee; /* Separator line between results */
+    font-size: 1em;
+    color: #333;
+}
+
+#results_container div:last-child {
+    border-bottom: none; /* Remove border from the last result item */
+}
+
+/* Special styling for the final quote display */
+.highlight-final-quote {
+    font-weight: bold;
+    font-size: 1.2em !important; /* Larger and bolder font, !important to ensure override */
+    color: #c0392b !important; /* Distinct red color for emphasis */
+    background-color: #fef5e7; /* Light orange/yellow background to make it stand out */
+    padding: 15px !important;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) { /* Tablets and smaller devices */
+    .container {
+        margin: 10px; /* Reduce margin on smaller screens */
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Adjust title font size */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile phones */
+    body {
+        padding: 10px; /* Further reduce body padding */
+    }
+    
+    input[type="number"],
+    button#calculate_button {
+        font-size: 0.95em; /* Adjust font size for inputs and button on very small screens */
+    }
+
+    legend {
+        font-size: 1em; /* Adjust legend font size */
+    }
+
+    #results_container div {
+        font-size: 0.9em; /* Adjust result text font size */
+        padding: 6px 10px; /* Adjust result padding */
+    }
+
+    .highlight-final-quote {
+        font-size: 1.1em !important; /* Adjust final quote font size */
+    }
+
+    /* Ensure provider specific inputs stack nicely on small screens */
+    .provider_inputs label,
+    .provider_inputs input[type="number"],
+    .provider_inputs select {
+        width: calc(100% - 20px); /* Adjust for padding/border on small screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

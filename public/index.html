@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Added language attribute -->
+<head>
+    <meta charset="UTF-8"> <!-- Specify character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport -->
+    <title>Pricing Calculator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+</head>
+<body>
+    <!-- Main container for the entire application -->
+    <div class="container">
+        <h1>Pricing Calculator</h1>
+        <!-- Form for user inputs -->
+        <form id="pricingForm">
+
+            <!-- Fieldset for Cloud Infrastructure Estimator -->
+            <fieldset>
+                <legend>Cloud Infrastructure Costs (Estimator)</legend>
+                <div>
+                    <input type="radio" name="cloud_provider_selector" value="azure" id="azure_selector" checked> <label for="azure_selector">Azure</label>
+                    <input type="radio" name="cloud_provider_selector" value="aws" id="aws_selector"> <label for="aws_selector">AWS</label>
+                    <input type="radio" name="cloud_provider_selector" value="gcp" id="gcp_selector"> <label for="gcp_selector">GCP</label>
+                </div>
+
+                <!-- Azure Inputs -->
+                <div id="azure_inputs" class="provider_inputs">
+                    <h2>Azure Configuration</h2>
+                    <label for="azure_compute_instances">Number of Compute Instances:</label>
+                    <input type="number" id="azure_compute_instances" name="azure_compute_instances" value="1" min="0">
+                    <label for="azure_compute_tier">Compute Instance Tier:</label>
+                    <select id="azure_compute_tier" name="azure_compute_tier">
+                        <option value="basic">Basic</option>
+                        <option value="general" selected>General Purpose</option>
+                        <option value="optimized">Compute Optimized</option>
+                    </select>
+                    <label for="azure_storage_gb">Amount of Storage (GB):</label>
+                    <input type="number" id="azure_storage_gb" name="azure_storage_gb" value="100" min="0">
+                    <label for="azure_db_instances">Number of Databases:</label>
+                    <input type="number" id="azure_db_instances" name="azure_db_instances" value="1" min="0">
+                    <label for="azure_db_tier">Database Tier:</label>
+                    <select id="azure_db_tier" name="azure_db_tier">
+                        <option value="basic">Basic</option>
+                        <option value="standard" selected>Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+
+                <!-- AWS Inputs -->
+                <div id="aws_inputs" class="provider_inputs" style="display: none;">
+                    <h2>AWS Configuration</h2>
+                    <label for="aws_compute_instances">Number of Compute Instances:</label>
+                    <input type="number" id="aws_compute_instances" name="aws_compute_instances" value="1" min="0">
+                    <label for="aws_compute_tier">Compute Instance Tier:</label>
+                    <select id="aws_compute_tier" name="aws_compute_tier">
+                        <option value="basic">Basic</option>
+                        <option value="general" selected>General Purpose</option>
+                        <option value="optimized">Compute Optimized</option>
+                    </select>
+                    <label for="aws_storage_gb">Amount of Storage (GB):</label>
+                    <input type="number" id="aws_storage_gb" name="aws_storage_gb" value="100" min="0">
+                    <label for="aws_db_instances">Number of Databases:</label>
+                    <input type="number" id="aws_db_instances" name="aws_db_instances" value="1" min="0">
+                    <label for="aws_db_tier">Database Tier:</label>
+                    <select id="aws_db_tier" name="aws_db_tier">
+                        <option value="basic">Basic</option>
+                        <option value="standard" selected>Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+
+                <!-- GCP Inputs -->
+                <div id="gcp_inputs" class="provider_inputs" style="display: none;">
+                    <h2>GCP Configuration</h2>
+                    <label for="gcp_compute_instances">Number of Compute Instances:</label>
+                    <input type="number" id="gcp_compute_instances" name="gcp_compute_instances" value="1" min="0">
+                    <label for="gcp_compute_tier">Compute Instance Tier:</label>
+                    <select id="gcp_compute_tier" name="gcp_compute_tier">
+                        <option value="basic">Basic</option>
+                        <option value="general" selected>General Purpose</option>
+                        <option value="optimized">Compute Optimized</option>
+                    </select>
+                    <label for="gcp_storage_gb">Amount of Storage (GB):</label>
+                    <input type="number" id="gcp_storage_gb" name="gcp_storage_gb" value="100" min="0">
+                    <label for="gcp_db_instances">Number of Databases:</label>
+                    <input type="number" id="gcp_db_instances" name="gcp_db_instances" value="1" min="0">
+                    <label for="gcp_db_tier">Database Tier:</label>
+                    <select id="gcp_db_tier" name="gcp_db_tier">
+                        <option value="basic">Basic</option>
+                        <option value="standard" selected>Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+                <div id="estimated_cloud_cost_display_container">
+                    <strong>Estimated Monthly Cloud Cost: <span id="estimated_cloud_cost_display">$0.00</span></strong>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Total License Costs</legend>
+                <label for="license_costs_input">Enter total monthly license costs:</label>
+                <input type="number" id="license_costs_input" name="license_costs_input" value="0" min="0"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Total Software Tool Costs</legend>
+                <label for="software_tool_costs_input">Enter total monthly software tool costs:</label>
+                <input type="number" id="software_tool_costs_input" name="software_tool_costs_input" value="0" min="0"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Total Support and Admin Costs</legend>
+                <label for="support_admin_costs_input">Enter total monthly support and admin costs:</label>
+                <input type="number" id="support_admin_costs_input" name="support_admin_costs_input" value="0" min="0"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Total Communication Services Cost</legend>
+                <label for="communication_services_cost_input">Enter total monthly communication services costs:</label>
+                <input type="number" id="communication_services_cost_input" name="communication_services_cost_input" value="0" min="0"><br>
+            </fieldset>
+
+            <!-- Calculate button to trigger price calculation -->
+            <button type="button" id="calculate_button">Calculate Final Quote</button>
+        </form>
+
+        <!-- Container for displaying calculation results -->
+        <div id="results_container">
+            <h2>Results</h2>
+            <!-- Individual divs for each result component -->
+            <div id="cloud_infrastructure_costs_display"></div>
+            <div id="license_costs_display"></div>
+            <div id="software_tool_costs_display"></div>
+            <div id="support_admin_costs_display"></div>
+            <div id="communication_services_cost_display"></div>
+            <div id="subtotal_display"></div>
+            <div id="market_trend_display"></div>
+            <div id="competitor_data_display"></div>
+            <div id="subtotal_after_adjustments_display"></div>
+            <div id="margin_display"></div>
+            <div id="total_before_tax_display"></div>
+            <div id="tax_display"></div>
+            <div id="final_quote_display" class="highlight-final-quote"></div> <!-- Final quote is highlighted -->
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
