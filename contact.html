@@ -4,105 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - GBA IT Solutions</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="profitability-guide-it-services-india.html">Pricing</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Resources</a>
-                    <div class="dropdown-content">
-                        <a href="profitability-guide-it-services-india.html">Profitability Guide</a>
-                        <a href="industry-solutions.html">Industry Solutions</a>
-                        <a href="faq.html">FAQs</a>
-                    </div>
-                </li>
+<body class="bg-gray-100 text-gray-800 font-sans leading-normal tracking-normal">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <ul class="flex justify-center space-x-4 md:space-x-8">
+                <li><a href="index.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a></li>
+                <li><a href="services.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a></li>
+                <li><a href="industry-solutions.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Industry Solutions</a></li>
+                <li><a href="about-us.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">About Us</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-<main>
-    <h1>Contact Us</h1>
-    <p>We're here to help you with your IT needs. Reach out to us to discuss your projects, ask questions about our services, or schedule a consultation. Our global team is ready to assist you.</p>
+    <main class="container mx-auto px-6 py-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Contact GBA IT Solutions</h1>
+        <p class="mb-4 text-gray-700">We're here to help you with your global IT needs. Whether you have a question about our services, want to discuss a project, or need expert advice, please don't hesitate to reach out. Connect with us through the form below or via our contact details.</p>
 
-    <section id="contact-form-section">
-        <h2>Send Us a Message</h2>
-        <form action="#" method="POST"> <!-- Placeholder action, no backend configured -->
-            <div>
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="company">Company Name:</label>
-                <input type="text" id="company" name="company">
-            </div>
-            <div>
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject">
-            </div>
-            <div>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
-            </div>
-            <button type="submit" class="cta-button">Send Message</button>
-        </form>
-        <p><small><em>Note: This form is a visual placeholder. Functionality requires backend integration.</em></small></p>
-    </section>
+        <section id="contact-form-section" class="bg-white p-8 rounded-lg shadow-lg md:w-2/3 mx-auto">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 mt-8">Send Us a Message</h2>
+            <form action="#" method="POST"> <!-- Placeholder action -->
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name:</label>
+                    <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address:</label>
+                    <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="company" class="block text-gray-700 text-sm font-bold mb-2">Company Name:</label>
+                    <input type="text" id="company" name="company" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject:</label>
+                    <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                    <textarea id="message" name="message" rows="6" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Send Message</button>
+            </form>
+        </section>
 
-    <section id="consultation">
-        <h2>Book Your Free 1-Hour Consultation</h2>
-        <p>Ready to discuss your IT strategy or a specific project? Schedule a complimentary 1-hour consultation with one of our experts. We'll explore your requirements and how GBA IT Solutions can help you achieve your goals.</p>
-        <!-- Placeholder for an embedded calendar or direct booking link -->
-        <p><strong>Option 1:</strong> Use the contact form above and mention "Free Consultation" in your message.</p>
-        <p><strong>Option 2:</strong> <a href="mailto:consultation@gbasolutions.example.com?subject=Request%20for%20Free%20Consultation" class="cta-button">Email Us to Schedule</a></p>
-        <p><small><em>(We are working on integrating a direct calendar booking system for your convenience!)</em></small></p>
-    </section>
+        <section id="other-contact-methods" class="bg-white p-8 rounded-lg shadow-lg mt-8 md:w-2/3 mx-auto">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 mt-8">Other Ways to Reach Us</h2>
+            <p class="mb-4 text-gray-700"><strong>General Inquiries:</strong></p>
+            <p class="mb-4 text-gray-700">Email: <a href="mailto:info@gbaitsolutions.com" class="text-blue-600 hover:text-blue-800 hover:underline">info@gbaitsolutions.com</a> (Placeholder)</p>
+            <p class="mb-4 text-gray-700">Phone: +1-555-GBA-ITSL (Placeholder)</p>
+            
+            <p class="mb-4 text-gray-700"><strong>Global Office Locations:</strong></p>
+            <p class="mb-4 text-gray-700"><em>Details about our global office locations and a map will be available here soon.</em></p>
+        </section>
 
-    <section id="other-contact-methods">
-        <h2>Other Ways to Reach Us</h2>
-        <p><strong>General Inquiries Email:</strong> <a href="mailto:info@gbasolutions.example.com">info@gbasolutions.example.com</a> (Placeholder)</p>
-        <p><strong>Phone (Global Head Office):</strong> +1-555-0100-GBA (Placeholder)</p>
-        <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM (Local Time Zones for Regional Offices - TBD)</p>
-        <!-- Placeholder for addresses if needed later -->
-        <!-- 
-        <p><strong>Our Office Locations:</strong></p>
-        <ul>
-            <li>Global HQ: [Address Placeholder]</li>
-            <li>Regional Office (APAC): [Address Placeholder]</li>
-            <li>Regional Office (EMEA): [Address Placeholder]</li>
+        <section id="connect" class="text-center mt-12 py-8">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 mt-8">Let's Discuss Your Global IT Future</h2>
+            <p class="mb-4 text-gray-700">GBA IT Solutions is ready to be your trusted partner in navigating the technological landscape. We look forward to hearing from you and exploring how we can drive your business success worldwide.</p>
+        </section>
+    </main>
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <p class="text-center text-sm">&copy; 2024 GBA IT Solutions. All rights reserved.</p>
+        <ul class="flex justify-center space-x-4 mt-2">
+            <li><a href="privacy-policy.html" class="text-gray-400 hover:text-gray-200 text-sm">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="text-gray-400 hover:text-gray-200 text-sm">Terms of Service</a></li>
         </ul>
-        -->
-    </section>
-</main>
-    <footer>
-        <p>&copy; 2024 GBA IT Solutions. All rights reserved.</p>
-        <ul>
-            <li><a href="faq.html">FAQs</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html">Terms of Service</a></li>
-        </ul>
-        <div>
-            <p>Connect with us:</p>
-            <ul>
-                <li><a href="#">LinkedIn</a> (Placeholder)</li>
-                <li><a href="#">GitHub</a> (Placeholder)</li>
-                <li><a href="#">Twitter</a> (Placeholder)</li>
-                <li><a href="#">YouTube</a> (Placeholder)</li>
-            </ul>
-        </div>
     </footer>
 </body>
 </html>

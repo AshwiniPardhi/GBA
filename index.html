@@ -4,132 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GBA IT Solutions - Your Global Technology Partner</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to CSS that will be created later -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="profitability-guide-it-services-india.html">Pricing</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Resources</a>
-                    <div class="dropdown-content">
-                        <a href="profitability-guide-it-services-india.html">Profitability Guide</a>
-                        <a href="industry-solutions.html">Industry Solutions</a>
-                        <a href="faq.html">FAQs</a>
-                    </div>
-                </li>
+<body class="bg-gray-100 text-gray-800 font-sans leading-normal tracking-normal">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <ul class="flex justify-center space-x-4 md:space-x-8">
+                <li><a href="index.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a></li>
+                <li><a href="services.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a></li>
+                <li><a href="industry-solutions.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Industry Solutions</a></li>
+                <li><a href="about-us.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">About Us</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-<main>
-    <section id="hero">
-        <h1>Enterprise-Grade IT Services, Engineered for Profitability</h1>
-        <p class="subheadline">From Cloud Infrastructure to Managed DevOps — Trusted Support at Transparent Pricing</p>
-        <a href="profitability-guide-it-services-india.html" class="cta-button">📊 Get Instant Pricing</a>
-        <a href="contact.html#consultation" class="cta-button">🕒 Book Free Consultation</a>
-        <!-- Note: contact.html#consultation assumes a section with id="consultation" will be added to contact.html -->
-    </section>
+    <main class="container mx-auto px-6 py-8">
+        <section id="hero" class="bg-blue-700 text-white text-center py-20 px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">GBA IT Solutions: Powering Your Global Ambitions with Future-Ready Technology</h1>
+            <p class="text-lg md:text-xl mb-8">We empower businesses worldwide with innovative IT services, from robust infrastructure and cloud solutions to cutting-edge cybersecurity and custom software development. Partner with us to navigate the complexities of the digital landscape and achieve sustainable growth.</p>
+            <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Request a Consultation</a>
+        </section>
 
-    <section id="services-snapshot">
-        <h2>Our Core Services</h2>
-        <div class="service-highlights-container">
-            <div class="service-highlight-item">
-                <!-- Placeholder for icon -->
-                <p class="icon-placeholder">[ICON]</p> 
-                <h3>Cloud Consulting</h3>
-                <p>Strategic guidance and implementation for AWS, Azure, and GCP to optimize your cloud journey.</p>
-                <a href="cloud-devops-services.html">Explore Cloud Consulting</a>
+        <section id="key-services" class="py-12">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 mt-8 text-center">Our Core Expertise</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-highlight bg-white p-6 rounded-lg shadow-lg mb-6">
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-700 mb-3 mt-6">Cloud & DevOps Transformation</h3>
+                    <p class="mb-4 text-gray-700">Leverage the full potential of the cloud with our expert consulting, migration, and cloud-native development services. We build scalable, resilient, and automated environments to accelerate your innovation.</p>
+                    <a href="cloud-devops-services.html" class="text-blue-600 hover:text-blue-800 hover:underline">Explore Cloud & DevOps</a>
+                </div>
+                <div class="service-highlight bg-white p-6 rounded-lg shadow-lg mb-6">
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-700 mb-3 mt-6">Comprehensive Cybersecurity</h3>
+                    <p class="mb-4 text-gray-700">Protect your valuable assets with our proactive cybersecurity services. From vulnerability assessments to 24x7 SOC monitoring, we safeguard your business against evolving threats.</p>
+                    <a href="cybersecurity-services.html" class="text-blue-600 hover:text-blue-800 hover:underline">Secure Your Business</a>
+                </div>
+                <div class="service-highlight bg-white p-6 rounded-lg shadow-lg mb-6">
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-700 mb-3 mt-6">Custom Software Solutions</h3>
+                    <p class="mb-4 text-gray-700">Gain a competitive edge with software tailored to your unique needs. Our teams specialize in web, mobile, and enterprise application development, modernizing legacy systems and integrating solutions seamlessly.</p>
+                    <a href="custom-software-development.html" class="text-blue-600 hover:text-blue-800 hover:underline">Develop Your Solution</a>
+                </div>
+                <div class="service-highlight bg-white p-6 rounded-lg shadow-lg mb-6">
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-700 mb-3 mt-6">Data & Analytics Insights</h3>
+                    <p class="mb-4 text-gray-700">Unlock the power of your data. We help you build robust data warehousing solutions, develop insightful BI dashboards, and integrate AI/ML for predictive analytics and smarter decision-making.</p>
+                    <a href="data-analytics-services.html" class="text-blue-600 hover:text-blue-800 hover:underline">Leverage Your Data</a>
+                </div>
             </div>
-            <div class="service-highlight-item">
-                <!-- Placeholder for icon -->
-                <p class="icon-placeholder">[ICON]</p>
-                <h3>Software Development</h3>
-                <p>Bespoke web and mobile applications tailored to your unique business requirements.</p>
-                <a href="custom-software-development.html">Explore Software Development</a>
-            </div>
-            <div class="service-highlight-item">
-                <!-- Placeholder for icon -->
-                <p class="icon-placeholder">[ICON]</p>
-                <h3>DevOps & Monitoring</h3>
-                <p>CI/CD pipelines, automation, and 24x7 monitoring to ensure operational excellence.</p>
-                <a href="cloud-devops-services.html#monitoring">Explore DevOps & Monitoring</a> <!-- Assumes a sub-link if possible -->
-            </div>
-            <div class="service-highlight-item">
-                <!-- Placeholder for icon -->
-                <p class="icon-placeholder">[ICON]</p>
-                <h3>Cybersecurity</h3>
-                <p>Comprehensive security solutions to protect your digital assets and ensure compliance.</p>
-                <a href="cybersecurity-services.html">Explore Cybersecurity</a>
-            </div>
-        </div>
-        <p><a href="services.html">View All Our Services</a></p>
-    </section>
+            <p class="text-center mt-8"><a href="services.html" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold">View All Our Services</a></p>
+        </section>
 
-    <section id="why-choose-us">
-        <h2>Why Choose GBA IT Solutions?</h2>
-        <ul>
-            <li><strong>Transparent Pricing:</strong> Clear, upfront costs detailed in our profitability guide. <a href="profitability-guide-it-services-india.html">Learn more</a>.</li>
-            <li><strong>35–45% Margin Efficiency:</strong> We optimize for cost-effectiveness while delivering premium services.</li>
-            <li><strong>Certified Experts:</strong> Our team holds industry-recognized certifications in leading technologies.</li>
-            <li><strong>24/7 Support:</strong> Round-the-clock assistance to keep your global operations running smoothly.</li>
-        </ul>
-    </section>
+        <section id="industry-focus" class="bg-gray-200 py-12 px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 mt-8">Tailored Solutions for Your Sector</h2>
+            <p class="mb-4 text-gray-700">We understand that every industry has unique challenges and opportunities. GBA IT Solutions provides specialized IT services for sectors including Healthcare, Finance, Insurance, and Education, ensuring compliance and driving innovation.</p>
+            <a href="industry-solutions.html" class="text-blue-600 hover:text-blue-800 hover:underline font-semibold">Discover Industry-Specific Services</a>
+        </section>
 
-    <section id="testimonials">
-        <h2>Client Testimonials & Trust Signals</h2>
-        <!-- Placeholder for logo strip -->
-        <div class="logo-strip">
-            <p>[Placeholder for Cloud/Tool Partner Logos: Azure, AWS, GitHub, Jira, etc.]</p>
-        </div>
-        <div class="testimonial-quotes">
-            <p>"[Placeholder for client rating and short quote]" - Client A</p>
-            <p>"[Placeholder for client rating and short quote]" - Client B</p>
-        </div>
-    </section>
-
-    <section id="case-studies-insights">
-        <h2>Recent Case Studies or Insights</h2>
-        <div class="insight-item">
-            <h3><a href="blog.html#case-study-fintech">How We Reduced IT Spend by 30% for a FinTech Client</a></h3>
-            <p>[Brief summary of the case study/insight]...</p>
-            <p><a href="blog.html#case-study-fintech">Read More</a></p> 
-            <!-- Assumes a blog post with id="case-study-fintech" -->
-        </div>
-        <p><a href="blog.html">View All Insights</a></p>
-    </section>
-
-    <section id="final-cta">
-        <h2>Ready to Get Started?</h2>
-        <p>Book Your Free 1-Hour Consultation Call to discuss your IT challenges and how we can help you achieve your business goals with profitable and transparent solutions.</p>
-        <a href="contact.html#consultation" class="cta-button">Book Free Consultation Now</a>
-        <p><small><em>(Optional: Placeholder for chatbot or calendar widget integration like Calendly)</em></small></p>
-    </section>
-</main>
-    <footer>
-        <p>&copy; 2024 GBA IT Solutions. All rights reserved.</p>
-        <ul>
-            <li><a href="faq.html">FAQs</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html">Terms of Service</a></li>
-        </ul>
-        <div>
-            <p>Connect with us:</p>
-            <ul>
-                <li><a href="#">LinkedIn</a> (Placeholder)</li>
-                <li><a href="#">GitHub</a> (Placeholder)</li>
-                <li><a href="#">Twitter</a> (Placeholder)</li>
-                <li><a href="#">YouTube</a> (Placeholder)</li>
+        <section id="why-gba" class="py-12 px-6">
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 mt-8 text-center">Why Partner with GBA IT Solutions?</h2>
+            <ul class="list-none grid md:grid-cols-2 gap-4 text-lg">
+                <li class="bg-white p-6 rounded-lg shadow"><strong>Global Reach, Local Expertise:</strong> Combining international best practices with a deep understanding of diverse markets.</li>
+                <li class="bg-white p-6 rounded-lg shadow"><strong>Future-Focused Innovation:</strong> Implementing cutting-edge technologies to keep you ahead of the curve.</li>
+                <li class="bg-white p-6 rounded-lg shadow"><strong>Client-Centric Approach:</strong> Your success is our priority. We build long-term partnerships based on trust and results.</li>
+                <li class="bg-white p-6 rounded-lg shadow"><strong>Comprehensive Service Portfolio:</strong> A one-stop solution for all your IT needs.</li>
             </ul>
-        </div>
+             <div class="text-center mt-8">
+                <a href="about-us.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Learn More About Us</a>
+             </div>
+        </section>
+    </main>
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <p class="text-center text-sm">&copy; 2024 GBA IT Solutions. All rights reserved.</p>
+        <ul class="flex justify-center space-x-4 mt-2">
+            <li><a href="privacy-policy.html" class="text-gray-400 hover:text-gray-200 text-sm">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="text-gray-400 hover:text-gray-200 text-sm">Terms of Service</a></li>
+        </ul>
     </footer>
 </body>
 </html>
